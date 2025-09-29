@@ -25,6 +25,8 @@ In short, SentinelFlow is not just an AI service layer—it is a **trust fabric*
 - **Models Service** → Simple hosted model stub (echo + context)  
 - **Audit/Evidence** → Evidence store via AIMS (`/v1/evidence`)
 
+---
+
 ## 📚 References  
 
 - Burns, B., Grant, B., Oppenheimer, D., Brewer, E., & Wilkes, J. (2016). *Borg, Omega, and Kubernetes*. Communications of the ACM, 59(5), 50–57. https://doi.org/10.1145/2890784  
