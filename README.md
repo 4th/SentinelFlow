@@ -87,6 +87,8 @@ flowchart TB
   TOOLS --> MODELS
   MODELS --> G1
 ```
+---
+
 # SentinelFlow — Quick Ops Cheat Sheet
 
 ## 📦 Local Development (Docker Desktop)
