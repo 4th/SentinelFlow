@@ -6,7 +6,6 @@ It demonstrates how governance, risk, and compliance (GRC) controls (e.g., Purvi
 ---
 
 ## ✨ Features
-
 - **Gateway** → Entry point, routes requests and enforces decisions  
 - **PEP** → Policy Enforcement Point, delegates to PDP  
 - **AIMS (PDP)** → Policy Decision Point, evaluates rules & logs evidence  
@@ -62,41 +61,3 @@ flowchart TB
   RAG --> TOOLS
   TOOLS --> MODELS
   MODELS --> G1
-# SentinelFlow — Quick Ops Cheat Sheet
-
-## 📦 Local Development (Docker Desktop)
-```powershell
-# from repo root
-docker compose up --build -d
-
-# health checks
-curl.exe http://localhost:8080/healthz   # gateway
-curl.exe http://localhost:8084/healthz   # pep
-curl.exe http://localhost:8090/healthz   # aims
-curl.exe http://localhost:8081/healthz   # rag
-curl.exe http://localhost:8082/healthz   # tools
-curl.exe http://localhost:8083/healthz   # models
-
-# login to GHCR
-docker login ghcr.io -u <USERNAME> -p <TOKEN>
-
-# build & push all services (example loop)
-$services = @("gateway","pep","aims","rag","tools","models")
-foreach ($s in $services) {
-  docker build -t ghcr.io/<org>/<repo>/$s:dev ".\services\$s"
-  docker push ghcr.io/<org>/<repo>/$s:dev
-}
-# namespace + chart install/upgrade
-helm upgrade --install platform .\charts\platform `
-  -n prod --create-namespace `
-  --set global.registry=ghcr.io `
-  --set global.owner=<org>/<repo> `
-  --set global.tag=dev
-
-# verify rollout and service endpoint
-kubectl -n prod rollout status deploy/sentinelflow-gateway
-kubectl -n prod get svc sentinelflow-gateway
-
-# (optional) quick access via port-forward
-kubectl -n prod port-forward svc/sentinelflow-gateway 8080:80
-curl.exe http://localhost:8080/healthz
