@@ -62,13 +62,22 @@ flowchart TB
   TOOLS --> MODELS
   MODELS --> G1
 ```
-## ✨ Features
-- **Gateway** → Entry point, routes requests and enforces decisions  
-- **PEP** → Policy Enforcement Point, delegates to PDP  
-- **AIMS (PDP)** → Policy Decision Point, evaluates rules & logs evidence  
-- **RAG Service** → Adds retrieval-augmented context before inference  
-- **Tools Service** → Stub for external APIs/tools  
-- **Models Service** → Simple hosted model stub (echo + context)  
-- **Audit/Evidence** → Evidence store via AIMS (`/v1/evidence`)
+# SentinelFlow — Quick Ops Cheat Sheet
+
+## 📦 Local Development (Docker Desktop)
+
+```powershell
+# from repo root
+docker compose up --build -d
+
+# health checks
+curl.exe http://localhost:8080/healthz   # gateway
+curl.exe http://localhost:8084/healthz   # pep
+curl.exe http://localhost:8090/healthz   # aims
+curl.exe http://localhost:8081/healthz   # rag
+curl.exe http://localhost:8082/healthz   # tools
+curl.exe http://localhost:8083/healthz   # models
+
+
 
 
