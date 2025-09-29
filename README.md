@@ -61,4 +61,14 @@ flowchart TB
   RAG --> TOOLS
   TOOLS --> MODELS
   MODELS --> G1
+```
+## ✨ Features
+- **Gateway** → Entry point, routes requests and enforces decisions  
+- **PEP** → Policy Enforcement Point, delegates to PDP  
+- **AIMS (PDP)** → Policy Decision Point, evaluates rules & logs evidence  
+- **RAG Service** → Adds retrieval-augmented context before inference  
+- **Tools Service** → Stub for external APIs/tools  
+- **Models Service** → Simple hosted model stub (echo + context)  
+- **Audit/Evidence** → Evidence store via AIMS (`/v1/evidence`)
+
 
