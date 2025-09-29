@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: sentinelflow-gateway }
+spec:
+  replicas: 1
+  selector: { matchLabels: { app: sentinelflow, comp: gateway } }
+  template:
+    metadata: { labels: { app: sentinelflow, comp: gateway } }
+    spec:
+      containers:
+        - name: gateway
+          image: {{ .Values.global.registry }}/{{ .Values.global.owner }}/gateway:{{ .Values.global.tag }}
+          ports: [{ containerPort: 8080 }]
+---
+apiVersion: v1
+kind: Service
+metadata: { name: sentinelflow-gateway }
+spec:
+  type: LoadBalancer
+  selector: { app: sentinelflow, comp: gateway }
+  ports: [{ port: 80, targetPort: 8080 }]

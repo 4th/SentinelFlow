@@ -1,0 +1,4 @@
+global:
+  registry: ghcr.io
+  owner: <you>/<repo>
+  tag: dev

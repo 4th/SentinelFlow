@@ -1,0 +1,21 @@
+# Default: text files normalized to LF in the repo
+* text=auto eol=lf
+
+# Unix-y files that MUST be LF
+*.sh      text eol=lf
+*.py      text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+Dockerfile text eol=lf
+*.tf      text eol=lf
+*.tpl     text eol=lf
+
+# Windows batch stays CRLF (if you add any)
+*.bat     text eol=crlf
+*.cmd     text eol=crlf
+
+# Treat binaries as-is
+*.zip     binary
+*.png     binary
+*.jpg     binary
+*.exe     binary
