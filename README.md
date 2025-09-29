@@ -94,7 +94,8 @@ curl.exe -X POST http://localhost:8080/v1/route `
 # Evidence log (AIMS)
 curl.exe http://localhost:8090/v1/evidence
 ```
-☸️ Kubernetes Deployment (images in GHCR)
+## ☸️ Kubernetes Deployment (images in GHCR)
+```
 # login to GHCR
 docker login ghcr.io -u <USERNAME> -p <TOKEN>
 
@@ -105,7 +106,9 @@ foreach ($s in $services) {
   docker push ghcr.io/<org>/<repo>/$s:dev
 }
 
-🧭 Helm deploy (any K8s cluster/context)
+```
+##🧭 Helm deploy (any K8s cluster/context)
+```
 # namespace + chart install/upgrade
 helm upgrade --install platform .\charts\platform `
   -n prod --create-namespace `
