@@ -66,7 +66,7 @@ flowchart TB
 
 ## 📦 Local Development (Docker Desktop)
 
-```powershell
+```
 # from repo root
 docker compose up --build -d
 
@@ -78,7 +78,8 @@ curl.exe http://localhost:8081/healthz   # rag
 curl.exe http://localhost:8082/healthz   # tools
 curl.exe http://localhost:8083/healthz   # models
 
-✅ Test requests (via Gateway)
+```
+## ✅ Test requests (via Gateway)
 # Allowed path
 curl.exe -X POST http://localhost:8080/v1/route `
   -H "Content-Type: application/json" `
