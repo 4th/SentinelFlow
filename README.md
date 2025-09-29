@@ -1,7 +1,18 @@
 # SentinelFlow
 
 **SentinelFlow** is a microservices-based platform for **policy-aware AI orchestration**.  
-It demonstrates how governance, risk, and compliance (GRC) controls (e.g., Purview-style policies, AIMS enforcement) can be integrated directly into AI service pipelines, with full observability and evidence tracking.
+It demonstrates how **governance, risk, and compliance (GRC)** controls can be **natively integrated** into AI workflows, ensuring that every model call is auditable, policy-driven, and aligned with enterprise requirements.
+
+Traditional AI pipelines focus on speed and accuracy but often lack **policy enforcement, risk awareness, and evidence logging**. SentinelFlow fills this gap by embedding **Microsoft Purview–style governance** and **AI Management System (AIMS)** controls directly into the runtime path.  
+
+By doing so, SentinelFlow provides:
+- 🔒 **Security and Governance** → All requests evaluated by a Policy Enforcement Point (PEP) against organizational policies before execution.  
+- 📊 **Observability and Auditability** → Every decision and model interaction is logged into an Evidence Store for compliance reporting.  
+- ⚖️ **Risk and Impact Awareness** → Dynamic checks against risk registers and Data Protection Impact Assessments (DPIAs).  
+- ⚙️ **Pluggable AI Runtime** → Works with Retrieval-Augmented Generation (RAG), tool brokers, and hosted models in a microservices design.  
+- ☁️ **Cloud-Native Design** → Deployable on any Kubernetes distribution (EKS, GKE, AKS, or on-prem), with CI/CD pipelines via GitHub Actions and GHCR container registry support.  
+
+In short, SentinelFlow is not just an AI service layer—it is a **trust fabric** that ensures every AI decision is **explainable, compliant, and enterprise-ready**.
 
 ---
 
