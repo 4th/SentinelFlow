@@ -107,7 +107,7 @@ foreach ($s in $services) {
 }
 
 ```
-##🧭 Helm deploy (any K8s cluster/context)
+## 🧭 Helm deploy (any K8s cluster/context)
 ```
 # namespace + chart install/upgrade
 helm upgrade --install platform .\charts\platform `
