@@ -61,3 +61,5 @@ flowchart TB
   RAG --> TOOLS
   TOOLS --> MODELS
   MODELS --> G1
+
+## ✨ Features
