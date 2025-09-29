@@ -80,6 +80,7 @@ curl.exe http://localhost:8083/healthz   # models
 
 ```
 ## ✅ Test requests (via Gateway)
+```
 # Allowed path
 curl.exe -X POST http://localhost:8080/v1/route `
   -H "Content-Type: application/json" `
@@ -92,7 +93,7 @@ curl.exe -X POST http://localhost:8080/v1/route `
 
 # Evidence log (AIMS)
 curl.exe http://localhost:8090/v1/evidence
-
+```
 ☸️ Kubernetes Deployment (images in GHCR)
 # login to GHCR
 docker login ghcr.io -u <USERNAME> -p <TOKEN>
