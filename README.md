@@ -31,7 +31,7 @@ In short, SentinelFlow is not just an AI service layer—it is a **trust fabric*
 
 - Burns, B., Grant, B., Oppenheimer, D., Brewer, E., & Wilkes, J. (2016). *Borg, Omega, and Kubernetes*. Communications of the ACM, 59(5), 50–57. https://doi.org/10.1145/2890784  
 - European Commission. (2021). *Proposal for a Regulation laying down harmonised rules on artificial intelligence (Artificial Intelligence Act)*. https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206
-- Floridi, L., & Cowls, J. (2022). *A unified framework of five principles for AI in society*. Harvard Data Science Review, 4(1). https://doi.org/10.1162/99608f92.feb68f92  
+- Floridi, L., & Cowls, J. (2022). *A unified framework of five principles for AI in society*. Harvard Data Science Review, 4(1). https://papers.ssrn.com/sol3/papers.cfm?abstract_id=383132   
 - ISO. (2023). *ISO/IEC 42001: Artificial Intelligence Management System (AIMS)*. International Organization for Standardization. https://www.iso.org/standard/81230.html  
 - Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., ... & Riedel, S. (2020). *Retrieval-augmented generation for knowledge-intensive NLP tasks*. Advances in Neural Information Processing Systems (NeurIPS). https://arxiv.org/abs/2005.11401  
 - Microsoft. (2023). *Microsoft Purview: Unified data governance*. Microsoft Docs. https://learn.microsoft.com/purview  
